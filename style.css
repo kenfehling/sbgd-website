@@ -1,0 +1,115 @@
+body {
+    background-color: black;
+    color: #0C0;
+    font-family: monospace;
+}
+
+@media screen and (max-width: 640px) {
+    #desktop-version {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 641px) {
+    #mobile-version {
+        display: none;
+    }
+}
+
+#mobile-version header {
+    border-bottom: 1px solid #0C0;
+    padding-bottom: 5px;
+    height: 44px;
+}
+
+#mobile-version header .title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#mobile-version header a.menu {
+    font-size: 28px;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    float: right;
+    margin-right: 5px;
+}
+
+#mobile-version .dashboard {
+    height: 360px;
+    width: 100%;
+}
+
+#mobile-version .dashboard td {
+    text-align: center;
+}
+
+#desktop-version header {
+    padding-top: 15px;
+    width: 920px;
+    margin: auto;
+}
+
+#desktop-version header, #desktop-version nav {
+    width: 640px;
+    text-align: center;
+}
+
+#desktop-version header {
+    font-size: 32px;
+}
+
+#desktop-version nav {
+    margin: 15px auto 35px auto;
+}
+
+.menu-item {
+    display: inline-block;
+    width: 154px;
+    text-align: center;
+}
+
+.menu-item .icon {
+    font-size: 48px;
+}
+
+#desktop-version main {
+    display: flex;
+    width: 920px;
+    margin: auto;
+}
+
+#desktop-version main .content {
+    width: 600px;
+    border: 2px solid #0C0;
+    border-radius: 2px;
+    padding: 0 20px 10px 20px;
+}
+
+#desktop-version main .follow {
+    width: 240px;
+    padding-left: 40px;
+}
+
+#desktop-version main .follow .title {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#desktop-version main .follow .follow-item {
+    padding-left: 60px;
+    margin-bottom: 5px;
+}
+
+#desktop-version main .follow .follow-item .icon {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.menu-item:hover, .follow-item:hover, header .title:hover {
+    color: #0F0;
+    cursor: pointer;
+}
