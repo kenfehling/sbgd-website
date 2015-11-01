@@ -58,11 +58,13 @@ a {
 #mobile-version header {
     border-bottom: 1px solid #0C0;
     padding: 5px;
-    height: 44px;
+    height: 43px;
+
 }
 
 #mobile-version header .title {
     font-size: 32px;
+    line-height: 42px;
     font-weight: bold;
     margin-left: 5px;
 }
