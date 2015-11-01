@@ -1,10 +1,25 @@
-var MENU_ITEMS = [ 'about', 'competition', 'learn', 'follow' ];
+var MENU_ITEMS = {
+    desktop: [ 'about', 'competition', 'learn' ],
+    mobile: [ 'about', 'competition', 'learn', 'follow' ]
+};
+
+function findTemplate(names, device) {
+    return _.find(MENU_ITEMS[device], function(item) {
+        return _.contains(names, item);
+    });
+}
+
+function findAndShowTemplate(names, device) {
+    var template = findTemplate(names, device);
+    if (template) {
+        showTemplate(template, device);
+    }
+}
 
 function onClick(e) {
-    var clickedItem = _.find(MENU_ITEMS, function(item) {
-        return _.contains($(e.currentTarget).get(0).classList, item);
-    });
-    showTemplate(clickedItem);
+    var classes = $(e.currentTarget).get(0).classList;
+    findAndShowTemplate(classes, 'desktop');
+    findAndShowTemplate(classes, 'mobile');
 }
 
 function registerClickHandlers() {
