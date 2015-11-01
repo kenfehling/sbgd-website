@@ -130,6 +130,7 @@ a {
 #desktop-version main .follow .follow-item {
     padding-left: 60px;
     margin-bottom: 5px;
+    display: block;
 }
 
 #desktop-version main .follow .follow-item .icon {
