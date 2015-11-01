@@ -1,3 +1,19 @@
+html, body, #mobile-version {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#mobile-version {
+    flex-direction: column;
+    -webkit-box-orient: vertical;  /** iOS 7 **/
+    display: flex;
+}
+
+.mobile-content {
+    flex: 1;
+}
+
 body {
     background-color: black;
     color: #0C0;
@@ -23,13 +39,14 @@ a {
 
 #mobile-version header {
     border-bottom: 1px solid #0C0;
-    padding-bottom: 5px;
+    padding: 5px;
     height: 44px;
 }
 
 #mobile-version header .title {
     font-size: 32px;
     font-weight: bold;
+
 }
 
 #mobile-version header a.menu {
@@ -40,7 +57,7 @@ a {
 }
 
 #mobile-version .dashboard {
-    height: 360px;
+    height: 100%;
     width: 100%;
 }
 
