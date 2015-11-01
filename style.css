@@ -4,6 +4,11 @@ body {
     font-family: monospace;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 640px) {
     #desktop-version {
         display: none;
@@ -29,8 +34,6 @@ body {
 
 #mobile-version header a.menu {
     font-size: 28px;
-    color: inherit;
-    text-decoration: none;
     display: block;
     float: right;
     margin-right: 5px;

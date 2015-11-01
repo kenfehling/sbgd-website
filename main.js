@@ -1,4 +1,4 @@
-var MENU_ITEMS = [ 'about', 'competition', 'learn' ];
+var MENU_ITEMS = [ 'about', 'competition', 'learn', 'follow' ];
 
 function onClick(e) {
     var clickedItem = _.find(MENU_ITEMS, function(item) {
@@ -9,9 +9,6 @@ function onClick(e) {
 
 function registerClickHandlers() {
     var $menuItems = $('.menu-item');
-
-    console.log($menuItems);
-
     $menuItems.off('click', onClick);
     $menuItems.on('click', onClick);
 }

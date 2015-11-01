@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <meta charset="UTF-8">
     <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/jcanvas.min.js"></script>
     <script src="lib/lodash.min.js"></script>
@@ -8,7 +10,6 @@
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="icomoon.css">
-    <meta charset="UTF-8">
     <title>SBGD</title>
     <script id="aboutTpl" type="text/template">
         <h2>About</h2>
@@ -67,6 +68,40 @@
             </tr>
         </table>
     </script>
+    <script id="followTpl" type="text/template">
+        <table class="dashboard" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <div class="menu-item facebook">
+                        <a href="http://facebook.com/groups/sbgamedev" target="_blank">
+                            <div class="icon icon-icon_facebook"></div>
+                            <div>Facebook</div>
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item twitter">
+                        <div class="icon icon-icon_twitter"></div>
+                        <div>Twitter</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu-item mail">
+                        <div class="icon icon-icon_mail"></div>
+                        <div>Mailing List</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item rss">
+                        <div class="icon icon-icon_rss"></div>
+                        <div>RSS Feed</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </script>
 </head>
 <body>
     <div id="mobile-version">
@@ -103,8 +138,10 @@
             <div class="follow">
                 <div class="title">Follow</div>
                 <div class="follow-item">
-                    <span class="icon icon-icon_facebook"></span>
-                    <span>Facebook</span>
+                    <a href="facebook.com/groups/sbgamedev" target="_blank">
+                        <span class="icon icon-icon_facebook"></span>
+                        <span>Facebook</span>
+                    </a>
                 </div>
                 <div class="follow-item">
                     <span class="icon icon-icon_follow"></span>
