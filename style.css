@@ -1,23 +1,28 @@
-html, body, #mobile-version {
-    height: 100%;
-    padding: 0;
+body {
     margin: 0;
+    background-color: black;
+    color: #0C0;
+    font-family: monospace;
 }
 
 #mobile-version {
-    flex-direction: column;
-    -webkit-box-orient: vertical;  /** iOS 7 **/
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .mobile-content {
     flex: 1;
-}
-
-body {
-    background-color: black;
-    color: #0C0;
-    font-family: monospace;
 }
 
 a {
@@ -59,6 +64,7 @@ a {
 #mobile-version .dashboard {
     height: 100%;
     width: 100%;
+    flex: 1;
 }
 
 #mobile-version .dashboard td {
