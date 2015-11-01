@@ -1,4 +1,5 @@
 body {
+    width: 100%;
     margin: 0;
     background-color: black;
     color: #0C0;
@@ -6,23 +7,33 @@ body {
 }
 
 #mobile-version {
+    position:absolute;
     height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
+    width: 100%;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-box-orient: vertical;
-    -moz-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .mobile-content {
     flex: 1;
+    display:flex;
+}
+
+#mobile-version .dashboard {
+    flex: 1;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#mobile-version .dashboard .menu-item {
+    position: relative;
+    width: 50%;
+}
+
+.menu-item {
+    text-align: center;
 }
 
 a {
@@ -61,16 +72,6 @@ a {
     margin-right: 5px;
 }
 
-#mobile-version .dashboard {
-    height: 100%;
-    width: 100%;
-    flex: 1;
-}
-
-#mobile-version .dashboard td {
-    text-align: center;
-}
-
 #desktop-version header {
     padding-top: 15px;
     width: 920px;
@@ -90,10 +91,9 @@ a {
     margin: 15px auto 35px auto;
 }
 
-.menu-item {
+#desktop-version .menu-item {
     display: inline-block;
     width: 154px;
-    text-align: center;
 }
 
 .menu-item .icon {
