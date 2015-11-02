@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?bpkhz1');
-	src:url('fonts/icomoon.eot?bpkhz1#iefix') format('embedded-opentype'),
-		url('fonts/icomoon.ttf?bpkhz1') format('truetype'),
-		url('fonts/icomoon.woff?bpkhz1') format('woff'),
-		url('fonts/icomoon.svg?bpkhz1#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?9428vg');
+	src:url('fonts/icomoon.eot?9428vg#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?9428vg') format('truetype'),
+		url('fonts/icomoon.woff?9428vg') format('woff'),
+		url('fonts/icomoon.svg?9428vg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-icon_facebook:before {
+	content: "\e903";
+}
+.icon-icon_mail:before {
+	content: "\e904";
+}
 .icon-icon_learn:before {
 	content: "\e901";
 }
@@ -31,9 +37,6 @@
 }
 .icon-icon_twitter:before {
 	content: "\e900";
-}
-.icon-icon_facebook:before {
-	content: "\e800";
 }
 .icon-icon_about:before {
 	content: "\e801";
@@ -46,8 +49,5 @@
 }
 .icon-icon_follow:before {
 	content: "\e804";
-}
-.icon-icon_mail:before {
-	content: "\e813";
 }
 
