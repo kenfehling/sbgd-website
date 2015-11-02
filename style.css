@@ -110,11 +110,19 @@ a {
     margin: auto;
 }
 
+@keyframes border-drop {
+    from { height: 0; }
+    to { height: 200px; }
+}
+
 #desktop-version main .content {
     width: 600px;
-    border: 2px solid #0C0;
+    border: 1px solid #0C0;
     border-radius: 2px;
     padding: 0 20px 10px 20px;
+    animation-name: border-drop;
+    animation-duration: 0.5s;
+    height: 200px;
 }
 
 #desktop-version main .follow {
@@ -154,4 +162,26 @@ a {
 
 .menu-item:active, .follow-item:active, header .title:active {
     color: #F00;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
