@@ -57,14 +57,21 @@ function showTemplate(name, device) {
     registerLinks();
 
     $(".about-content").typed({
-        strings: ["Stony Brook Game Developers (SBGD) is a special interest group of the Stony Brook Computing Society.<br><br>" +
-        "Our Fall 2015 meetings are held Tuesdays from 6:00pm to 8:00pm in the new Computer Science building, Room 115."],
+        strings: [
+            "Stony Brook Game Developers (SBGD) is a special interest " +
+            "group of the Stony Brook Computing Society. <br><br>" +
+            "Our Fall 2015 meetings are held Tuesdays from 6:00pm to 8:00pm " +
+            "in the new Computer Science building, Room 115."
+        ],
         typeSpeed: 0,
         contentType: 'html'
     });
 
     $(".competition-content").typed({
-        strings: ["The annual Game Programming Competition is held in May at the end of the Spring semester."],
+        strings: [
+            "The annual Game Programming Competition is held in May " +
+            "at the end of the Spring semester."
+        ],
         typeSpeed: 0,
         contentType: 'html'
     });
