@@ -23,6 +23,7 @@ body {
 
 #mobile-version .dashboard {
     flex: 1;
+    padding-bottom: 86px;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -59,7 +60,6 @@ a {
     border-bottom: 1px solid #0C0;
     padding: 5px;
     height: 43px;
-
 }
 
 #mobile-version header .title {
@@ -140,7 +140,18 @@ a {
     vertical-align: middle;
 }
 
-.menu-item:hover, .follow-item:hover, header .title:hover {
+#desktop-version .menu-item:hover,
+#desktop-version .follow-item:hover,
+#desktop-version header .title:hover {
     color: #0F0;
+}
+
+.menu-item:hover,
+.follow-item:hover,
+.title:hover {
     cursor: pointer;
+}
+
+.menu-item:active, .follow-item:active, header .title:active {
+    color: #F00;
 }

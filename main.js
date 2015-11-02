@@ -25,6 +25,7 @@ function findAndShowTemplate(names, device) {
 
 function onClick(e) {
     var classes = $(e.currentTarget).get(0).classList;
+    $(e.currentTarget).blur();
     findAndShowTemplate(classes, 'desktop');
     findAndShowTemplate(classes, 'mobile');
 }
