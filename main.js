@@ -5,9 +5,9 @@ var MENU_ITEMS = {
 
 var LINKS = {
     facebook: 'http://facebook.com/groups/sbgamedev',
-    twitter: 'http://twitter.com',
-    mail: 'http://mailchimp.com',
-    rss: 'http://feedburner.com'
+    twitter: 'https://twitter.com/sbgamedev',
+    youtube: 'http://youtube.com/channel/UCphKL94CG1xWWYBlYyzIe6g',
+    mail: 'http://us2.campaign-archive2.com/?u=2ad728739096f696cf3ae5d25&id=629f6b4980'
 };
 
 function findTemplate(names, device) {
