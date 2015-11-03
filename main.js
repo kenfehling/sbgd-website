@@ -76,6 +76,14 @@ function showTemplate(name, device) {
         typeSpeed: -20,
         contentType: 'html'
     });
+
+    $(".learn-content").typed({
+        strings: [
+            "Resources for learning to make games:"
+        ],
+        typeSpeed: -20,
+        contentType: 'html'
+    });
 }
 
 function goHome() {
