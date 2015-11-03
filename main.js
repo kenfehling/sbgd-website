@@ -55,6 +55,7 @@ function showTemplate(name, device) {
     }
     registerClickHandlers();
     registerLinks();
+    $('#menu-content').removeClass('open');
 
     $(".about-content").typed({
         strings: [
@@ -63,7 +64,7 @@ function showTemplate(name, device) {
             "Our Fall 2015 meetings are held Tuesdays from 6:00pm to 8:00pm " +
             "in the new Computer Science building, Room 115."
         ],
-        typeSpeed: 0,
+        typeSpeed: -20,
         contentType: 'html'
     });
 
@@ -72,7 +73,7 @@ function showTemplate(name, device) {
             "The annual Game Programming Competition is held in May " +
             "at the end of the Spring semester."
         ],
-        typeSpeed: 0,
+        typeSpeed: -20,
         contentType: 'html'
     });
 }
@@ -82,7 +83,19 @@ function goHome() {
     showTemplate('dashboard', 'mobile');
 }
 
+function toggleMenu() {
+    var $menu = $('#menu-content');
+    if ($menu.hasClass('open')) {
+        $menu.removeClass('open');
+    }
+    else {
+        $menu.addClass('open');
+    }
+}
+
 $(document).ready(function () {
     $('header .title').click(goHome);
+    $('#menu-content .home').click(goHome);
     goHome();
+    $('#menu-button').click(toggleMenu);
 });
