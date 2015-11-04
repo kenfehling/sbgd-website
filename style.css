@@ -211,3 +211,7 @@ a {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+svg {
+    fill: #0C0;
+}

@@ -101,9 +101,38 @@ function toggleMenu() {
     }
 }
 
+function loadSvg(name, width, height) {
+    var snap = new Snap('#' + name);
+    Snap.load('images/' + name + '.svg', function(data) {
+        snap.append(data);
+        var $el = $("#" + name);
+        var $img = $(document.createElement('img'));
+        $img.attr('src', 'images/' + name + '.jpg');
+        $img.css('width', width + 'px');
+        $img.css('height', height + 'px');
+        $img.css('display', 'none');
+        var svg = $el.find('svg')[0];
+        svg.setAttribute('width', width + 'px');
+        svg.setAttribute('height', height + 'px');
+        svg.setAttribute('viewBox', '0 0 ' + 2048 + ' ' + 1365);
+        svg.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+        $el.on('mouseover', function() {
+            $(svg).css('display', 'none');
+            $img.css('display', 'inline');
+        });
+        $el.on('mouseout', function() {
+            $(svg).css('display', 'inline');
+            $img.css('display', 'none');
+        });
+        $el.append($img);
+    });
+
+}
+
 $(document).ready(function () {
     $('header .title').click(goHome);
     $('#menu-content .home').click(goHome);
     goHome();
     $('#menu-button').click(toggleMenu);
+    loadSvg('manny', 600, 400);
 });
