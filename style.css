@@ -62,7 +62,7 @@ a {
     height: 43px;
 }
 
-#mobile-version header x.title {
+#mobile-version header .title {
     font-size: 32px;
     line-height: 42px;
     font-weight: bold;
