@@ -107,7 +107,7 @@ function loadSvg(name, width, height) {
         snap.append(data);
         var $el = $("#" + name);
         var $img = $(document.createElement('img'));
-        $img.attr('src', 'images/' + name + '.jpg');
+        $img.attr('src', 'images/' + name + '.gif');
         $img.css('width', width + 'px');
         $img.css('height', height + 'px');
         $img.css('display', 'none');
@@ -131,7 +131,7 @@ function loadSvg(name, width, height) {
 
 $(document).ready(function () {
     $('header .title').click(goHome);
-    $('#menu-content .home').click(goHome);
+    $('#menu-content').find('.home').click(goHome);
     goHome();
     $('#menu-button').click(toggleMenu);
     loadSvg('manny', 600, 400);
