@@ -44,13 +44,13 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px), (orientation: portrait) {
     #desktop-version {
         display: none;
     }
 }
 
-@media screen and (min-width: 641px) {
+@media screen and (min-width: 641px) and (orientation: landscape) {
     #mobile-version {
         display: none;
     }
