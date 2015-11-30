@@ -64,7 +64,7 @@ a {
     text-decoration: none;
 }
 
-.content a {
+.about-content a, .competition-content a, .learn-content a {
     text-decoration: underline;
 }
 
