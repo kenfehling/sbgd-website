@@ -6,6 +6,26 @@ body {
     font-family: monospace;
 }
 
+input {
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: thin solid #0C0;
+    border-radius: 1px;
+    margin: 3px;
+}
+
+button, input[type="button"], input[type="submit"] {
+    padding: 3px 10px 5px 10px;
+    cursor: pointer;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #0C0;
+    color: #000;
+}
+
 #mobile-version {
     position:absolute;
     height: 100vh;
@@ -44,13 +64,17 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 640px), (orientation: portrait) {
+.content a {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 640px) {
     #desktop-version {
         display: none;
     }
 }
 
-@media screen and (min-width: 641px) and (orientation: landscape) {
+@media screen and (min-width: 641px) {
     #mobile-version {
         display: none;
     }
@@ -188,6 +212,15 @@ a {
 
 #menu-content.open {
     display: block;
+}
+
+#mail-table {
+    margin: 16px auto;
+}
+
+#mail-table td.label {
+    text-align: right;
+    padding-right: 2px;
 }
 
 .typed-cursor{

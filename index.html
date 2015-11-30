@@ -27,19 +27,19 @@
     </script>
     <script id="dashboardTpl" type="text/template">
         <div class="dashboard" cellpadding="0" cellspacing="0">
-            <div class="menu-item about">
+            <div class="menu-item click-handler about">
                 <div class="icon icon-icon_about"></div>
                 <div>About</div>
             </div>
-            <div class="menu-item competition">
+            <div class="menu-item click-handler competition">
                 <div class="icon icon-icon_competition"></div>
                 <div>Competition</div>
             </div>
-            <div class="menu-item learn">
+            <div class="menu-item click-handler learn">
                 <div class="icon icon-icon_learn"></div>
                 <div>Learn</div>
             </div>
-            <div class="menu-item follow">
+            <div class="menu-item click-handler follow">
                 <div class="icon icon-icon_follow"></div>
                 <div>Follow</div>
             </div>
@@ -59,11 +59,37 @@
                 <div class="icon icon-icon_youtube"></div>
                 <div>YouTube</div>
             </a>
-            <a class="menu-item mail">
+            <a class="menu-item click-handler mail">
                 <div class="icon icon-icon_mail"></div>
                 <div>Mailing List</div>
             </a>
         </div>
+    </script>
+    <script id="mailTpl" type="text/template">
+        <h2>Mailing list</h2>
+        <form method="post" action="http://www.sinc.sunysb.edu/cgi-bin/cgiwrap/kfehling/mailing_list.pl"
+              enctype="application/x-www-form-urlencoded">
+            <table id="mail-table">
+                <tr>
+                    <td class="label"><label for="fn">First Name:</label></td>
+                    <td><input id="fn" name="first_name" size="30" /></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="ln">Last Name:</label></td>
+                    <td><input id="ln" name="last_name" size="30" /></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="e">Email:</label></td>
+                    <td><input id="e" name="email" size="30" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="center">
+                        <input type="submit" value="Sign up" />
+                    </td>
+                </tr>
+            </table>
+        </form>
     </script>
 </head>
 <body>
@@ -71,13 +97,13 @@
         <header>
             <span class="title">SBGD</span>
             <div id="menu-button" class="icon icon-icon_menu"></div>
-            <ul id="menu-content">
-                <div class="menu-item home">Home</div>
-                <div class="menu-item about">About</div>
-                <div class="menu-item competition">Competition</div>
-                <div class="menu-item learn">Learn</div>
-                <div class="menu-item follow">Follow</div>
-            </ul>
+            <div id="menu-content">
+                <div class="menu-item click-handler home">Home</div>
+                <div class="menu-item click-handler about">About</div>
+                <div class="menu-item click-handler competition">Competition</div>
+                <div class="menu-item click-handler learn">Learn</div>
+                <div class="menu-item click-handler follow">Follow</div>
+            </div>
         </header>
         <main class="mobile-content content"></main>
     </div>
@@ -86,15 +112,15 @@
             <span class="title">Stony Brook Game Developers</span>
         </header>
         <nav>
-            <div class="menu-item about">
+            <div class="menu-item click-handler about">
                 <div class="icon icon-icon_about"></div>
                 <div>About</div>
             </div>
-            <div class="menu-item competition">
+            <div class="menu-item click-handler competition">
                 <div class="icon icon-icon_competition"></div>
                 <div>Competition</div>
             </div>
-            <div class="menu-item learn">
+            <div class="menu-item click-handler learn">
                 <div class="icon icon-icon_learn"></div>
                 <div>Learn</div>
             </div>
@@ -115,7 +141,7 @@
                     <span class="icon icon-icon_youtube"></span>
                     <span>YouTube</span>
                 </a>
-                <a class="follow-item mail">
+                <a class="follow-item click-handler mail">
                     <span class="icon icon-icon_mail"></span>
                     <span>Mailing List</span>
                 </a>

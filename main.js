@@ -1,13 +1,12 @@
 var MENU_ITEMS = {
-    desktop: [ 'about', 'competition', 'learn' ],
-    mobile: [ 'about', 'competition', 'learn', 'follow' ]
+    desktop: [ 'about', 'competition', 'learn', 'mail' ],
+    mobile: [ 'about', 'competition', 'learn', 'mail', 'follow' ]
 };
 
 var LINKS = {
     facebook: 'http://facebook.com/groups/sbgamedev',
     twitter: 'https://twitter.com/sbgamedev',
-    youtube: 'http://youtube.com/channel/UCphKL94CG1xWWYBlYyzIe6g',
-    mail: 'http://us2.campaign-archive2.com/?u=2ad728739096f696cf3ae5d25&id=629f6b4980'
+    youtube: 'http://youtube.com/channel/UCphKL94CG1xWWYBlYyzIe6g'
 };
 
 function findTemplate(names, device) {
@@ -31,9 +30,9 @@ function onClick(e) {
 }
 
 function registerClickHandlers() {
-    var $menuItems = $('.menu-item');
-    $menuItems.off('click', onClick);
-    $menuItems.on('click', onClick);
+    var $clickHandlers = $('.click-handler');
+    $clickHandlers.off('click', onClick);
+    $clickHandlers.on('click', onClick);
 }
 
 function registerLinks() {
@@ -71,7 +70,10 @@ function showTemplate(name, device) {
     $(".competition-content").typed({
         strings: [
             "The annual Game Programming Competition is held in May " +
-            "at the end of the Spring semester."
+            "at the end of the Spring semester.<br><br>" +
+            "See the " +
+            "<a href='http://www3.cs.stonybrook.edu/~games' target='_blank'>" +
+            "main competition page</a> for more information."
         ],
         typeSpeed: -20,
         contentType: 'html'
@@ -79,7 +81,13 @@ function showTemplate(name, device) {
 
     $(".learn-content").typed({
         strings: [
-            "Resources for learning to make games:"
+            "Get started making your first game:<br>" +
+            "<ul>" +
+                "<li><a href='http://unity3d.com' target='_blank'>Unity</a></li>" +
+                "<li><a href='http://code.visualstudio.com' target='_blank'>Visual Studio Code</a></li>" +
+            "</ul><ul>" +
+                "<li><a href='http://unity3d.com/learn/tutorials/projects/space-shooter-tutorial' target='_blank'>Space shooter tutorial</a></li>" +
+            "</ul>"
         ],
         typeSpeed: -20,
         contentType: 'html'
