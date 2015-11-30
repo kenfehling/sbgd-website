@@ -70,10 +70,11 @@ function showTemplate(name, device) {
     $(".competition-content").typed({
         strings: [
             "The annual Game Programming Competition is held in May " +
-            "at the end of the Spring semester.<br><br>" +
-            "See the " +
-            "<a href='http://www3.cs.stonybrook.edu/~games' target='_blank'>" +
-            "main competition page</a> for more information."
+            "at the end of the Spring semester.<br>" +
+            "<ul>" +
+                "<li><a href='http://www3.cs.stonybrook.edu/~games' target='_blank'>Competition page</a>" +
+                "<li><a href='http://youtube.com/user/SBUGameProgramming/videos?view=1' target='_blank'>Competition YouTube</a>" +
+            "</ul>"
         ],
         typeSpeed: -20,
         contentType: 'html'
